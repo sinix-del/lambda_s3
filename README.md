@@ -1,3 +1,10 @@
+Classic client side rendering: https://d1ybbe54bc3ql8.cloudfront.net/  
+Classic server side rendering: https://d1ybbe54bc3ql8.cloudfront.net/ssr
+Edge rendering: https://d1ybbe54bc3ql8.cloudfront.net/edgessr
+
+Sve je na us-east-1 regiji, Lmambda@Edge ne moze biti na nijednoj drugoj regiji
+
+
 # Sample to deploy React SSR on Lambda
 
 This repository consists of a sample to demonstrate two variants to do Server Side Rendering with AWS Lambda for React applications.
