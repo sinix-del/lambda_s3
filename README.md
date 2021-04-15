@@ -1,72 +1,70 @@
-Classic client side rendering: https://d1ybbe54bc3ql8.cloudfront.net/  
-Classic server side rendering: https://d1ybbe54bc3ql8.cloudfront.net/ssr  
-Edge rendering: https://d1ybbe54bc3ql8.cloudfront.net/edgessr  
+# Getting Started with Create React App
 
-Sve je na us-east-1 regiji, Lambda@Edge ne moze biti na nijednoj drugoj regiji
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-# Sample to deploy React SSR on Lambda
+In the project directory, you can run:
 
-This repository consists of a sample to demonstrate two variants to do Server Side Rendering with AWS Lambda for React applications.
-It usues AWS CDK to make the deployment.
+### `npm start`
 
-This solution can only be provisioned in the us-east-1 Region as it deploys Lambda@Edge, which can only be done in that Region.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![alt](images/LambdaSSR-Architecture.png)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Requirements
-- Node.js 12.x
-- AWS CDK 1.72+
-- Configured aws credentials
-- This example will only be deployed successfuly in us-east-1 region as it is using AWS Lambda@Edge
+### `npm test`
 
-## Folder structure
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- /cdk - code to deploy the solution 
-- /simple-ssr - React application created with the create-react-app tool.
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Deployment
-- Clone git repository
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-    `git clone https://github.com/aws-samples/react-ssr-lambda.git`
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Run the following commands in your terminal window, provide the name of the S3 bucket instead of `<your bucket name>`, for example `mybucket`, to deploy the static content
+### `npm run eject`
 
-    `cd react-ssr-lambda`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-    `cd ./cdk`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-    `npm install`
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-    `npm run build`
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-    `cdk bootstrap`
+## Learn More
 
-    `cdk deploy SSRApiStack --outputs-file ../simple-ssr/src/config.json`
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-    `cd ../simple-ssr`
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-    `npm install`
+### Code Splitting
 
-    `npm run build-all`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-    `cd ../cdk`
+### Analyzing the Bundle Size
 
-    `cdk deploy SSRAppStack --parameters mySiteBucketName=<your bucket name>`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- After successful deployment you will see output variables
+### Making a Progressive Web App
 
-    **CF URL** - for React App stored on S3 and rendered on client
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-    **Lambda SSR URL** - for React App rendered by Lambda behind API Gateway
+### Advanced Configuration
 
-    **Lambda@Edge SSR URL** - for React App rendered by Lambda@Edge
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-- To clean-up the reated resources run
+### Deployment
 
-    `cd ./cdk`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-    `cdk destroy SSRApiStack`
-    
-    `cdk destroy SSRAppStack`
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

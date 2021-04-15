@@ -1,3 +1,4 @@
+node_modules
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -9,15 +10,7 @@
 /coverage
 
 # production
-/build/*
-!/build/.keep
-/server-build/*
-!/server-build/.keep
-/edge-build/*
-!/edge-build/.keep
-
-#config
-config.json
+/build
 
 # misc
 .DS_Store
