@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { Fragment } from 'react'
 
-const url = 'https://935t0a8idi.execute-api.us-east-1.amazonaws.com/api'
+const url = 'https://umzmm90xm2.execute-api.us-east-1.amazonaws.com/api'
 
 class App extends React.Component {
     state = {
